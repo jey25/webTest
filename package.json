@@ -4,6 +4,12 @@
     "selenium-webdriver": "^4.1.2"
   },
   "devDependencies": {
-    "chromedriver": "^100.0.0"
+    "chromedriver": "^100.0.0",
+    "cypress": "^9.6.0"
+  }
+}
+{
+  "scripts": {
+    "cypress:open": "cypress open"
   }
 }
