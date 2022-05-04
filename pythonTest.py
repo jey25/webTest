@@ -15,20 +15,29 @@ from selenium import webdriver
 import time
 
 browser = webdriver.Chrome()
-browser.get("http://python.org")
+browser.get("http://naver.com")
 
-menus = browser.find_elements_by_css_selector('#top ul.menu li')
+time.sleep(0.5)
+browser.find_element_by_class_name("link_login").click()
 
-pypi = None
-for m in menus:
-    if m.text == "PyPI":
-        pypi = m
-    print(m.text)
+time.sleep(0.5)
+browser.find_element_by_id("id").send_keys('id')
+time.sleep(0.5)
+browser.find_element_by_id("pw").send_keys('pw')
+time.sleep(0.5)
+browser.find_element_by_class_name("btn_login").click()
 
-pypi.click()
 
-time.sleep(5)
-browser.quit()
+# pypi = None
+# for m in menus:
+#     if m.text == "PyPI":
+#         pypi = m
+#     print(m.text)
+
+# pypi.click()
+
+# time.sleep(5)
+# browser.quit()
 
 
 # from selenium import webdriver
