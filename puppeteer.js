@@ -18,12 +18,11 @@ const puppeteer = require('puppeteer');
     })
     
     await Promise.all([
-        page.goto(`https://studio.zepeto.me/kr`),
+        page.goto(`https://www.google.co.kr/`),
         page.waitForNavigation()
     ])
     
     await page.waitForTimeout(3000);
-    // await page.screenshot({path: `/Users/jey28/Downloads/x.png`});
     
     await browser.close();
     
