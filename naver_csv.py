@@ -38,6 +38,10 @@ while True:
         break
     before_h = after_h
 
+#파일 생성
+f = open(r"C:\Users\jey28\Desktop\js\webTest\data.csv", 'w', encoding='CP949', newline='')
+csvWriter = csv.writer(f)
+
 #상춤 정보 duv
 items = browser.find_elements(By.CSS_SELECTOR, ".basicList_info_area__17Xyo")
 
@@ -49,3 +53,6 @@ for item in items:
         price = "price null"
     link = item.find_element(By.CSS_SELECTOR, ".basicList_title__3P9Q7 > a").get_attribute('href')
     print(name, price, link)
+    csvWriter.writerow([name, price, link])
+
+f.close()

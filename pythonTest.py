@@ -1,5 +1,4 @@
 # from argparse import Action
-# from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 # from selenium.webdriver.common.action_chains import ActionChains
 
@@ -38,10 +37,6 @@ browser.find_element_by_class_name("btn_login").click()
 
 # time.sleep(5)
 # browser.quit()
-
-
-# from selenium import webdriver
-# import time
 
 # chromedriver = 'C:\dev_python\Webdriver\chromedriver.exe'
 # driver = webdriver.Chrome(chromedriver)
